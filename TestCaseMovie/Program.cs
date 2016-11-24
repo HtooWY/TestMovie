@@ -67,7 +67,6 @@ namespace TestCaseMovie
             request.AddParameter("undefined", "{}", ParameterType.RequestBody);
             var response = client.Execute(request);
             JToken json_video = JToken.Parse(response.Content);
-            Console.WriteLine(json_video);
             string video_key = json_video["results"][0]["key"].ToString();
             string video_url = "https://www.youtube.com/watch?v=" + video_key;
 

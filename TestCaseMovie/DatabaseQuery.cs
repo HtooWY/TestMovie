@@ -112,8 +112,7 @@ namespace TestCaseMovie
                 {
                     myConn.Open();
                     myCommand.ExecuteNonQuery();
-                    //Console.WriteLine(myCommand.ExecuteNonQuery());
-                    MessageBox.Show("Record inserted Successfully", "Table", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    Console.WriteLine("Record inserted Successfully");
                 }
 
                 catch (System.Exception ex)
