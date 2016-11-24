@@ -129,17 +129,6 @@ namespace TestCaseMovie
                 }
             }
         }
-
-        static void Main(string[] args)
-        {
-
-            // get table column names
-            JToken test = Program.GetJson();
-            UpdateTable(test);
-            
-
-        }
-
     }
 
 }
