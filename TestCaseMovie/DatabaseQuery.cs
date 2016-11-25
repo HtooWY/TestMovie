@@ -13,7 +13,7 @@ namespace TestCaseMovie
     class DatabaseQuery
     {
         //Create new Database
-        static void CreateDb()
+        public static void CreateDb()
         {
             String query;
             using (SqlConnection myConn = new SqlConnection())
@@ -43,7 +43,7 @@ namespace TestCaseMovie
         }
 
         // Create movie table
-        static void CreateTable(JToken json)
+        public static void CreateTable(JToken json)
         {
             String query;
 

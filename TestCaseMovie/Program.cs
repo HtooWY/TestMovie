@@ -37,7 +37,7 @@ namespace TestCaseMovie
         
         // This is permanent page access token to the page
         // I used this directly to post to facebook
-        const string perm_access_token = "EAADABUITz88BAJsBNTXPAGLiT7dQMmtRZBGfYeOFcNdaxmptxLZAhchoBucmhIgxWmMgjdkmAS1lV2t7wIgSwFOMxZCgKmSZA6dZCXoDioL0ZBuSkaNZAdy2RN6xaLyWRoTBG8fEQPOdQJROMp2zEZAnsrKGc6gE2tJscHxiXu5KB2sBsyTOGNDy";
+        const string perm_access_token = "EAADABUITz88BADhfSXZCvMonwW0tXWVMN8NZCvot1NefPgaJGzmU9RwudaNR2ls8M2MoZAM51LJ4nlwZBaNZCQn7eSatrFYbM23tNmgCfwySdkwXeND2sk2EiyrgxeHKiZAhVLwl45iWHXhge1uo8RuAIWc8GJVwEU4jQrPN08BAZDZD";
 
         // get the synopsis, video url, title of the movie
         public static JToken GetJson()
@@ -52,7 +52,7 @@ namespace TestCaseMovie
         }
 
         // Extract information as string from json
-        static List<String> GetInfo(JToken json)
+        public static List<String> GetInfo(JToken json)
         {
             List<String> info = new List<String>();
             var title = json["title"].ToString();
@@ -78,7 +78,7 @@ namespace TestCaseMovie
 
         // Get page access token
         // this will return short-lived(2 hrs) page access token
-        static string GetPageAccessToken(string appId, string appSecret, string userAccessToken)
+        public static string GetPageAccessToken(string appId, string appSecret, string userAccessToken)
         {
 
             string pageAccessToken = string.Empty;
@@ -103,7 +103,7 @@ namespace TestCaseMovie
         }
 
         // Post the info to facebook
-        private static void PostFacebook(string message, string link, string accessToken, string pageId)
+        public static void PostFacebook(string message, string link, string accessToken, string pageId)
         {
             var fb = new FacebookClient(accessToken);
             dynamic messagePost = new ExpandoObject();
