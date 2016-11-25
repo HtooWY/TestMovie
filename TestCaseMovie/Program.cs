@@ -116,6 +116,14 @@ namespace TestCaseMovie
 
         static void Main(string[] args)
         {
+            // Create database if no database is created
+            Boolean createdb = false;
+            if (createdb)
+            {
+                DatabaseQuery.CreateDb();
+                DatabaseQuery.CreateTable(GetJson());
+            }
+
             //JObject json = JObject.Parse(GetInfo());
             JToken json = null;
             while (true)
